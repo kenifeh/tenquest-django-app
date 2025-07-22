@@ -1,6 +1,7 @@
 venv/*
 db.sqlite3
 .idea
+.vscode/
 .git
 static/*
 bin
@@ -8,4 +9,5 @@ lib
 media/*
 buyboxProject/__pycache__/*
 api/__pycache__/*
-.vscode/*.env
+.env
+.env
