@@ -1,0 +1,11 @@
+venv/*
+db.sqlite3
+.idea
+.git
+static/*
+bin
+lib
+media/*
+buyboxProject/__pycache__/*
+api/__pycache__/*
+.vscode/*.env

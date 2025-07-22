@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{% block title %}{% endblock %}</title>
+    {% load static %}
+<link rel="stylesheet" href="{% static 'css/style.css' %}">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://cdn.rawgit.com/stevenmonson/googleReviews/master/google-places.css">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link rel="icon" type="image/x-icon" href="{% static 'img/logo.png' %}">
+</head>
+<body>
+        <header>
+            <div class="site_menu">
+                <div class="site_logo">
+                    <a href="/">
+                        <img src="{% static 'img/logo.png' %}" alt="">
+                    </a>
+                </div>
+                <div class="site_links">
+                    <div class="menu_bar" id="menuButton">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <ul class="menu_links">
+                        <li>
+                            <a href="#" class="menu_link">services</a>
+                            <ul class="sub_menu">
+                                <li>
+                                    <a href="/ca-to-us" class="menu_link">canada to usa</a>
+                                </li>
+                                <li>
+                                    <a href="/us-to-ca" class="menu_link">usa to canada</a>
+                                </li>
+                                <li>
+                                    <a href="/pack" class="menu_link">pack</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#" class="menu_link">Why Buybox</a>
+                            <ul class="sub_menu">
+                                <li>
+                                    <a href="/why-box" class="menu_link">How it works</a>
+                                </li>
+                                <li>
+                                    <a href="/blog" class="menu_link">Blog</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="/pricing" class="menu_link">pricing</a>
+                        </li>
+                        <li>
+                            <a href="/contact" class="menu_link">contact</a>
+                        </li>
+                        <li class="m_active">
+                            <a href="http://buyboxexpress.ca" class="menu_link">Login</a>
+                        </li>
+                        <li class="m_active">
+                            <a href="http://buyboxexpress.ca/register" class="menu_link">get started</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="menu_btns">
+                    <a href="http://buyboxexpress.ca">Login</a>
+                    <a href="http://buyboxexpress.ca/register">get started</a>
+                </div>
+            </div>
+        </header>
+
+
+
+{% block content %}
+{% endblock %}
+
+        <!-- Footer Sec -->
+        <footer>
+            <div class="main_container">
+                <div class="footer_content">
+                    <div class="leftpan">
+                        <h5 class="links_title">Useful links</h5>
+                        <ul class="useful_links">
+                            <li><a href="/">Home</a></li>
+                            <li><a href="/why-box">About</a></li>
+                            <li><a href="/pricing">Products</a></li>
+                            <li><a href="/ca-to-us">Services</a></li>
+                            <li><a href="#">Legal</a></li>
+                            <li><a href="/contact">contact us</a></li>
+                        </ul>
+                    </div>
+                    <div class="midpan">
+                        <h5 class="links_title">Our Mission</h5>
+                        <p class="links_para">
+                            At Buybox Express, our mission is to address the shipping challenges encountered by e-commerce businesses.
+                            We are dedicated to developing cutting-edge shipping solutions that facilitate faster, more intelligent,
+                            and cost-effective shipping experiences.
+                        </p>
+                    </div>
+                    <div class="rightpan">
+                        <h5 class="links_title">Connect with us</h5>
+                        <ul class="connect_links">
+                            <li>
+                                <i class="fa fa-map-marker"></i> #109 290 Caldari Rd, Concord, ON L4K 4J4
+                            </li>
+                            <li>
+                                <i class="fa fa-envelope"></i> buyboxexpress.com
+                            </li>
+                            <li>
+                                <i class="fa fa-phone"></i> (905) 780-3083
+                            </li>
+                            <li>
+                                <a href="https://www.facebook.com/Buyboxexpress"><i class="fa fa-facebook"></i></a>
+                                <a href="https://twitter.com/BuyboxExpress"><i class="fa fa-twitter"></i></a>
+                                <a href="https://www.linkedin.com/company/buybox-express/mycompany/?viewAsMember=true"><i class="fa fa-linkedin"></i></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <p class="copy_right">© 2023 BuyBox Express. All rights reserved.</p>
+            </div>
+        </footer>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+        <script src="{% static 'js/custom.js' %}"></script>
+<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/stevenmonson/googleReviews@6e8f0d794393ec657dab69eb1421f3a60add23ef/google-places.js"></script>
+<script>
+    function initMap() {
+        $("#google-reviews").googlePlaces({
+            placeId: 'ChIJcUCb1Z8vK4gRy9-BHc5VSgY',
+            render: ['reviews'],
+            min_rating: 4,
+            max_rows: 6
+        });
+    }
+</script>
+<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&key=AIzaSyAcYUeHLIeckAcyrr6nJE27fhA3kqa5B5U&signed_in=true&libraries=places&callback=initMap"></script>
+</body>
+</html>

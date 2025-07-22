@@ -1,0 +1,275 @@
+{% extends "master.html" %}
+
+{% block title %}
+Home
+{% endblock %}
+
+{% block content %}
+<!-- Hero Banner -->
+<section class="hero_banner">
+    <div class="main_container">
+        <div class="content_sec">
+            <div class="leftpan">
+                <h1 class="main_title main_title_btm">E-commerce Shipping Solution in the Cloud</h1>
+                <!-- <p class="para_title">Discover Our Proficiency in:</p> -->
+                <ul class="hero_list">
+                    <li>Cross-Border Shipping Across Canada and the USA</li>
+                    <li>USA E-commerce Shipments Drop-Off with UPS/USPS & FedEx</li>
+                    <li>Pickup from Our USA Location to Canada</li>
+                    <li>Speedy Delivery to GTA and Any Canadian Location</li>
+                </ul>
+                <a href="http://buyboxexpress.ca/register" class="primary_cta">Get started now</a>
+            </div>
+            <div class="rightpan">
+                <img src="../static/img/hero_img.png" alt="">
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="cal_sec">
+    <div class="main_container">
+        <h2 class="sub_title">Get an estimate with our shipping calculator!</h2>
+        <div class="calculator">
+            <div class="calculator_fields">
+                <label for="originCountry">
+                    <select name="originCountry" id="originCountry">
+                        <option value="USA">USA</option>
+                        <option value="Canada">Canada</option>
+                    </select>
+                </label>
+                <label for="destinationCountry">
+                    <select name="destinationCountry" id="destinationCountry" disabled>
+                        <option value="Canada">Canada</option>
+                        <option value="USA">USA</option>
+                    </select>
+                </label>
+                <label for="">
+                    <select name="packageCategory" id="packageCategory">
+                        <option value="packageCategory">Package Category</option>
+                    </select>
+                </label>
+            </div>
+            <div class="calculator_fields">
+                <label for="products">
+                    <select name="products" id="products">
+                        <option value="">Select a package category</option>
+                    </select>
+                </label>
+                <label for="quantity">
+                    <input type="number" name="quantity" id="quantity" value="1">
+                </label>
+                <label for="productType" id="productTypeOption">
+                    <select name="productType" id="productType">
+                        <option value="">Product Type</option>
+                        <option value="consolidate">Consolidate</option>
+                        <option value="nonconsolidate">Non-Consolidate</option>
+                    </select>
+                </label>
+                <label for="productWeight" id="productWeightOption" style="display:none;">
+                    <select name="productWeight" id="productWeight">
+                        <option value="">Product Weight</option>
+                        <option value="0lbs to 9.99lbs">0lbs to 9.99lbs</option>
+                        <option value="10lbs to 19.99lbs">10lbs to 19.99lbs</option>
+                        <option value="20lbs to 29.99lbs">20lbs to 29.99lbs</option>
+                        <option value="30lbs to 39.99lbs">30lbs to 39.99lbs</option>
+                        <option value="Over 40lbs">Over 40lbs</option>
+                    </select>
+                </label>
+
+                <label for="Location">
+                    <select name="Where the Product is Made" id="location">
+                        <option value="">Location</option>
+                        <option value="Canada">Canada</option>
+                        <option value="Elsewhere">Elsewhere</option>
+                    </select>
+                </label>
+            </div>
+            <input type="submit" name="" id="" value="get rates" class="white_cta" onclick="rate()">
+            <p>Import duties and taxes may apply. <b><a href="#">Click here to determine</a></b></p>
+        </div>
+        <div class="rates" id="rates" style="display: none;">
+            <h5 style="margin:0px">Total Price</h5>
+            <p id="taxLine">Tax: <span id="taxLineValue"> $0.00</span></p>
+            <p id="dutyLine">Duty:<span id="dutyLineValue"> $0.00</span></p>
+            <p id="totalPriceLine">Total: <span id="totalPriceLineValue"> $0.00</span></p>
+        </div>
+    </div>
+</section>
+
+<section class="express_offer">
+    <div class="main_container">
+        <h2 class="inner_title">Buybox Express offers simple solutions to streamline your shipping experience.</h2>
+        <div class="content_sec">
+            <div class="single_col">
+                <img src="../static/img/offer_1.png" alt="">
+                <h5>Canada to USA E-commerce Shipping</h5>
+                <p>
+                    With Buybox Express, your e-commerce packages and parcels smoothly
+                    cross the border for convenient drop-off at USPS/UPS/FedEx locations in Niagara Falls, NY.
+                </p>
+            </div>
+            <div class="single_col">
+                <img src="../static/img/offer_2.png" alt="">
+                <h5>USA to Canada Shipping and Pickups</h5>
+                <p>
+                    Count on Buybox Express to transport your e-commerce packages and parcels from our Niagara Falls,
+                    NY facility to our GTA pickup center. Additionally, we offer cost-effective shipping to any
+                    destination within Canada.
+                </p>
+            </div>
+            <div class="single_col">
+                <img src="../static/img/offer_3.png" alt="">
+                <h5>Prep, Pack & Ship </h5>
+                <p>
+                    Buybox Express delivers competitive rates for eCommerce businesses seeking Prep, Pack & Ship
+                    fulfillment services.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="ctus_sec">
+    <div class="main_container">
+        <h2 class="title_after title_before">Canada to USA Shipping</h2>
+        <div class="content_sec">
+            <div class="single_ctus">
+                <p class="number_title">1</p>
+                <img class="icon_img" src="../static/img/icon_1.png" alt="">
+                <ul class="ctus_list">
+                    <li>Sign up on our website and log in.</li>
+                    <li>Navigate to "New Shipment" or "Import."</li>
+                    <li>Complete the necessary shipment details.</li>
+                    <li>Make your payment.</li>
+                </ul>
+            </div>
+            <div class="single_ctus">
+                <p class="number_title">2</p>
+                <img class="icon_img" src="../static/img/icon_2.png" alt="">
+                <ul class="ctus_list">
+                    <li>Prepare your packages for shipping.</li>
+                    <li>Affix a USA carrier label to each one.</li>
+                </ul>
+            </div>
+            <div class="single_ctus">
+                <p class="number_title">3</p>
+                <img class="icon_img" src="../static/img/icon_3.png" alt="">
+                <ul class="ctus_list">
+                    <li>Drop off your items at our location, OR</li>
+                    <li>Reach out to us to arrange a pickup at your preferred location.</li>
+                </ul>
+            </div>
+            <div class="single_ctus">
+                <p class="number_title">4</p>
+                <img class="icon_img" src="../static/img/icon_4.png" alt="">
+                <ul class="ctus_list">
+                    <li>We will prepare customs paperwork for free.</li>
+                    <li>We will drive the packages across the Canada-USA border and hand them over to any USA carrier of
+                        your choice.
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="utcs">
+    <div class="main_container">
+        <h2 class="title_before title_after">USA to Canada Shipping</h2>
+        <div class="content_sec">
+            <div class="single_utcs">
+                <p class="number_title">1</p>
+                <img class="icon_img" src="../static/img/icon_1.png" alt="">
+                <ul class="ctus_list">
+                    <li>Signup on our website, and you'll receive a USA address.</li>
+                </ul>
+            </div>
+            <div class="single_utcs">
+                <p class="number_title">2</p>
+                <img class="icon_img" src="../static/img/icon_2.png" alt="">
+                <ul class="ctus_list">
+                    <li>Have your USA packages shipped to your cost-free USA address.</li>
+                    <li>Provide us with the tracking number.</li>
+                </ul>
+            </div>
+        </div>
+        <div class="content_sec">
+            <div class="single_utcs">
+                <p class="number_title">3</p>
+                <img class="icon_img" src="../static/img/icon_5.png" alt="">
+                <ul class="ctus_list">
+                    <li>When we receive your packages, we will send you an email notification.</li>
+                </ul>
+            </div>
+            <div class="single_utcs">
+                <p class="number_title">4</p>
+                <img class="icon_img" src="../static/img/icon_4.png" alt="">
+                <ul class="ctus_list">
+                    <li>We will bring your products into Canada.</li>
+                </ul>
+            </div>
+            <div class="single_utcs">
+                <p class="number_title">5</p>
+                <img class="icon_img" src="../static/img/icon_3.png" alt="">
+                <ul class="ctus_list">
+                    <li>Pickup from our GTA facility or have us mail the packages directly to you.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="mission_sec">
+    <div class="main_container">
+        <h2>Our Mission statement</h2>
+        <p>
+            At Buybox Express, our mission is to innovate technological tools and processes that empower
+            both businesses and individuals to dismantle supply chain barriers, ultimately elevating
+            their e-commerce experiences.
+        </p>
+        <div class="content_sec">
+            <h3>How it Works</h3>
+            <div class="statement_con">
+                <p>
+                    Discover the reasons why Canadian eCommerce enterprises are opting for Buybox Express.
+                    Simplify your shipping workflow by seamlessly connecting your online store and effectively
+                    managing all your orders from a single platform provided by Buybox Express.
+                </p>
+                <h5><a href="#">Explore the workings of Buybox's shipping service in greater detail. <i
+                        class="fa fa-long-arrow-right"></i> </a></h5>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="review_sec">
+    <div class="main_container">
+        <h2>
+            Read this feedback and judge for yourself why Buybox
+            Express is trusted by thousands of businesses and
+            individuals alike.
+        </h2>
+        <div class="google_reviews">            
+            <div class="first_child_review">
+                <h3>4.9</h3>
+                <p>on Google Reviews Avg. after 120 ratings</p>
+                <span>
+                    <i class="fa fa-star checked"></i>
+                    <i class="fa fa-star checked"></i>
+                    <i class="fa fa-star checked"></i>
+                    <i class="fa fa-star checked"></i>
+                    <i class="fa fa-star checked"></i>
+                </span>
+            </div>
+            <!-- <div id="google-reviews"></div> -->
+            <div class="elfsight-app-ed0467bb-dcee-40a6-96ef-39255925013c button_none" id="button_none" data-elfsight-app-lazy></div>
+        </div>
+    </div>
+    <script src="https://static.elfsight.com/platform/platform.js" data-use-service-core defer>
+    
+    </script>
+    
+</section>
+
+{% endblock %}

@@ -1,0 +1,191 @@
+{% extends "master.html" %}
+
+{% block title %}
+    Why Buybox Express
+{% endblock %}
+
+
+
+{% block content %}
+        
+        <!-- Inner Hero Banner -->
+        <section class="hero_banner why_box">
+            <div class="main_container">
+                <div class="content_sec">
+                    <div class="leftpan">
+                        <h5 class="hero_sub_title">WELCOME TO THE BUYBOX EXPRESS BLOG!</h5>
+                        <h1 class="main_title">Grow your eCommerce Business in Canada</h1>   
+                        <p class="para_title para_big_title">
+                            “I need more inbox clutter,” said no one ever. That’s why we’ll only send practical emails that will
+                            improve your business, once a week. You’ll receive the best tips, strategies, and news on Canadian eCommerce.
+                        </p>
+                        <form method="post" action="/blog/">
+                            {% csrf_token %}
+                        <div class="subscribe_box">
+                             <input type="email" name="email" placeholder="Enter your email">
+                            <button>Subscribe</button>
+                        </div>
+                        </form>
+                    </div>
+                    <div class="rightpan">
+                        <a href="#">
+                            <img src="../static/img/why_box.png" alt="">
+                        </a>                        
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="blogs">
+            <div class="tab_sec">                           
+                    <div class="tab_btns">    
+                        <div class="main_container">
+                            <button class="tab-button active" onclick="openTab(1)">Blog Home</button>
+                            <button class="tab-button" onclick="openTab(2)">News & Announcements</button>
+                            <button class="tab-button" onclick="openTab(3)">Ecommerce Tips</button>
+                            <button class="tab-button" onclick="openTab(4)">Shipping & Fulfillment</button>
+                            <button class="tab-button" onclick="openTab(5)">Marketplace Strategies</button>
+                            <button class="tab-button" onclick="openTab(6)">Customer Spotlights</button>
+                        </div>
+                    </div>                
+                    <div class="main_container">
+                        <div class="tab_content">
+                            <div class="tab" id="tab1" style="display: block;">
+                                <h2>Latest Blog Posts</h2>
+                                <div class="blogs_con">
+                                {% for blog in blogs %}
+                                    {% if blog.tab == 'tab1' %}
+                                    <div class="blog_col">
+                                        <h3> {{blog.title}}</h3>
+                                        <div class="meta">
+                                            <span>{{blog.created_date}}</span>
+                                            <span>{{blog.author}}</span>
+                                        </div>
+                                        <h6>{{blog.category}}</h6>
+                                        <p>                                            
+                                            {{blog.description}}
+                                        </p>
+                                        <a href="{% url 'api:blog-detail' slug=blog.slug %}">Read More</a>
+                                    </div>
+                                        {% endif %}
+                                {% endfor %}
+                                </div>
+                            </div>
+
+                            <div class="tab" id="tab2">
+
+                                <h2>Latest News & Announcements</h2>
+                                <div class="blogs_con">
+                                {% for blog in blogs %}
+                                    {% if blog.tab == 'tab2' %}
+                                    <div class="blog_col">
+                                        <h3> {{blog.title}}</h3>
+                                        <div class="meta">
+                                            <span>{{blog.created_date}}</span>
+                                            <span>{{blog.author}}</span>
+                                        </div>
+                                        <h6>{{blog.category}}</h6>
+                                        <p>                                            
+                                            {{blog.description}}
+                                        </p>
+                                        <a href="{% url 'api:blog-detail' slug=blog.slug %}">Read More</a>
+                                    </div>
+                                    {% endif %}
+                                {% endfor %}
+                                </div>
+                            </div>
+
+                            <div class="tab" id="tab3">
+                                <h2>Latest Ecommerce Tips</h2>
+                                <div class="blogs_con">
+                                {% for blog in blogs %}
+                                    {% if blog.tab == 'tab3' %}
+                                    <div class="blog_col">
+                                        <h3>{{blog.title}}</h3>
+                                        <div class="meta">
+                                            <span>{{blog.create_date}}</span>
+                                            <span>{{blog.author}}</span>
+                                        </div>
+                                        <h6>{{blog.category}}</h6>
+                                        <p>
+                                            {{blog.description}}
+                                        </p>
+                                        <a href="{% url 'api:blog-detail' slug=blog.slug %}">Read More</a>
+                                    </div>
+                                    {% endif %}
+                                {% endfor %}
+                                </div>
+                            </div>
+
+                            <div class="tab" id="tab4">
+                                <h2>Latest Shipping & Fulfillment</h2>
+                                <div class="blogs_con">
+                                {% for blog in blogs %}
+                                    {% if blog.tab == 'tab4' %}
+                                    <div class="blog_col">
+                                        <h3>{{blog.title}}</h3>
+                                        <div class="meta">
+                                            <span>{{blog.create_date}}</span>
+                                            <span>{{blog.author}}</span>
+                                        </div>
+                                        <h6>{{blog.category}}</h6>
+                                        <p>                                            
+                                            {{blog.description}}
+                                        </p>
+                                        <a href="{% url 'api:blog-detail' slug=blog.slug %}">Read More</a>
+                                    </div>
+                                    {% endif %}
+                                {% endfor %}
+                                </div>
+                            </div>
+
+                            <div class="tab" id="tab5">
+                                <h2>Latest Marketplace Strategies</h2>
+                                <div class="blogs_con">
+                                {% for blog in blogs %}
+                                    {% if blog.tab == 'tab5' %}
+                                    <div class="blog_col">
+                                        <h3>{{blog.title}}</h3>
+                                        <div class="meta">
+                                            <span>{{blog.create_date}}</span>
+                                            <span>{{blog.author}}</span>
+                                        </div>
+                                        <h6>{{blog.category}}</h6>
+                                        <p>
+                                            {{blog.description}}
+                                        </p>
+                                        <a href="{% url 'api:blog-detail' slug=blog.slug %}">Read More</a>
+                                    </div>
+                                    {% endif %}
+                                {% endfor %}
+                                </div>
+                            </div>
+
+                            <div class="tab" id="tab6">
+                                <h2>Latest Customer Spotlights</h2>
+                                <div class="blogs_con">
+                                {% for blog in blogs %}
+                                    {% if blog.tab == 'tab6' %}
+                                    <div class="blog_col">
+                                        <h3>{{blog.title}}</h3>
+                                        <div class="meta">
+                                            <span>{{blog.create_date}}</span>
+                                            <span>{{blog.author}}</span>
+                                        </div>
+                                        <h6>{{blog.category}}</h6>
+                                        <p>
+                                            {{blog.description}}
+                                        </p>
+                                        <a href="{% url 'api:blog-detail' slug=blog.slug %}">Read More</a>
+                                    </div>
+                                    {% endif %}
+                                {% endfor %}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        </section>
+
+<script src="../static/js/custom2.js"></script>
+{% endblock %}

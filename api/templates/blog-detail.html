@@ -1,0 +1,31 @@
+{% extends "master.html" %}
+
+{% block title %}
+    {{blog.title}}
+{% endblock %}
+
+{% block content %}
+ <section class="blogs">
+            <div class="main_container">
+                <div class="content_sec">
+                    <h2 class="title_after title_before">{{blog.title}}</h2>
+                    <div class="blogs_sec">
+                        <div class="blog">
+                            <div class="blog_content">
+                                <h3>How to Ship from Canada to USA</h3>
+                                <div class="meta">
+                                            <span>{{blog.created_date}}</span>
+                                            <span>{{blog.author}}</span>
+                                        </div>
+                                        <h6>{{blog.category}}</h6>
+                                        <p>
+                                            {{blog.description}}
+                                        </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+ </section>
+
+{% endblock %}

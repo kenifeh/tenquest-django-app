@@ -1,0 +1,204 @@
+{% extends "master.html" %}
+
+{% block title %}
+            USA to Canada
+        {% endblock %}
+
+        {% block content %}
+
+        <!-- Inner Hero Banner -->
+        <section class="hero_banner usa-to-ca">
+            <div class="main_container">
+                <div class="content_sec">
+                    <div class="leftpan">
+                        <h1 class="main_title">USA to Canada Shipping and Pickups</h1>   
+                        <p class="para_title para_big_title">
+                            Count on Buybox Express to transport your e-commerce packages and parcels from our Niagara Falls, 
+                            NY facility to our GTA pickup center. Additionally, we offer cost-effective shipping 
+                            to any destination within Canada.
+                        </p>
+                        <a href="#">get start</a>
+                    </div>
+                    <div class="rightpan">
+                        <img src="../static/img/usa-to-ca.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="business_needs">
+            <div class="main_container">
+                <div class="content_sec">                    
+                    <h2>USA to Canada Shipment Service - For Both Business and Personal Needs</h2>
+                    <h5>Individuals:</h5>
+                    <p>
+                        Unlock the best deals in the USA marketplace and order items not readily available in Canada. 
+                        Simply ship your purchases to the USA address we provide to you, and we'll handle the delivery of your packages into Canada.
+                    </p>
+                    <h5>Businesses:</h5>
+                    <p>
+                        If you are a Canadian eCommerce seller on platforms like FBA, Etsy, eBay, etc., seeking a dependable solution for returning
+                        items to Canada, Buy Box Express is your ideal choice. Send your customer returns to our USA address, and we will take 
+                        care of bringing those items into Canada for you.
+                    </p>
+                    <p>
+                        Alternatively, if you're a business owner looking to import and sell products from the U.S. in the Canadian market, 
+                        send your inventory to our USA address, and we will bring them into Canada for you.
+                    </p>
+                </div>
+            </div>
+        </section>
+        
+        <section class="utcs">
+            <div class="main_container">
+                <h2 class="title_before title_after">USA to Canada Shipping</h2>
+                <div class="content_sec">
+                    <div class="single_utcs">
+                        <p class="number_title">1</p>
+                        <img class="icon_img" src="../static/img/icon_1.png" alt="">
+                        <ul class="ctus_list">
+                            <li>Signup on our website, and you'll receive a USA address. </li>
+                        </ul>
+                    </div>
+                    <div class="single_utcs">
+                        <p class="number_title">2</p>
+                        <img class="icon_img" src="../static/img/icon_2.png" alt="">
+                        <ul class="ctus_list">
+                            <li>Have your USA packages shipped to your cost-free USA address.</li>
+                            <li>Provide us with the tracking number.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="content_sec">
+                    <div class="single_utcs">
+                        <p class="number_title">3</p>
+                        <img class="icon_img" src="../static/img/icon_5.png" alt="">
+                        <ul class="ctus_list">
+                            <li>When we receive your packages, we will send you an email notification.</li>
+                        </ul>
+                    </div>
+                    <div class="single_utcs">
+                        <p class="number_title">4</p>
+                        <img class="icon_img" src="../static/img/icon_4.png" alt="">
+                        <ul class="ctus_list">
+                            <li>We will bring your products into Canada.</li>
+                        </ul>
+                    </div>
+                    <div class="single_utcs">
+                        <p class="number_title">5</p>
+                        <img class="icon_img" src="../static/img/icon_3.png" alt="">
+                        <ul class="ctus_list">
+                            <li>Pickup from our GTA facility or have us mail the packages directly to you.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="usa_cal">
+            <div class="main_container">
+                <h2>Get an estimate with our shipping calculator!</h2>
+                <h4>Estimate duty and taxes</h4>
+                <p>
+                    From the Canada Border Services Agency <br>
+                    This tool provides an estimate only and applies strictly to goods imported for personal use.
+                    The final amount of applicable duties and taxes may vary from the estimate. 
+                    The amount you have to pay will be determined by a border services officer when you arrive at the border.
+                    For more information, including personal exemption amounts, consult Paying duties and taxes.
+                </p>
+                <h5>All form fields are required.</h5>
+                <div class="content_sec">
+                    <div class="leftpan">
+                        <div class="single_field">
+                            <label>1. Where do you live?</label>
+                            <select name="province" id="province">
+                                <option value="" selected disabled>Select a province or territory</option>
+                                <option value="AB">Alberta</option>
+                                <option value="BC">British Columbia</option>
+                                <option value="MB">Manitoba</option>
+                                <option value="NB">New Brunswick</option>
+                                <option value="NL">Newfoundland and Labrador</option>
+                                <option value="NS">Nova Scotia</option>
+                                <option value="NT">Northwest Territories</option>
+                                <option value="NU">Nunavut</option>
+                                <option value="ON">Ontario</option>
+                                <option value="PE">Prince Edward Island</option>
+                                <option value="QC">Quebec</option>
+                                <option value="SK">Saskatchewan</option>
+                                <option value="YT">Yukon</option>
+                            </select>
+
+                        </div>
+                        <div class="single_field">
+                            <label>2. What product did you buy?</label>
+                            <div class="inner_field">
+                                <span>Category</span>
+                                <select name="packageCategory" id="packageCategory">
+                                    <option value="packageCategory">Package Category</option>
+                                </select>
+                            </div>
+                            <div class="inner_field">
+                                <span>Product</span>
+                                <select name="products" id="products">
+                                    <option value="">Select a package category</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="single_field">
+                            <label>3. Was the product made in a CUSMA country?</label>
+                            <select name="origin" id="origin">
+                                <option value="" selected disabled>Make a Selection</option>
+                                <option value="Canada">Yes, it was made within Canada, the United States, or Mexico (CUSMA)</option>
+                                <option value="Elsewhere">No, it was made elsewhere</option>
+                            </select>
+                        </div>
+                        <div class="single_field">
+                            <label>4. How much did the product costin Canadian dollars?</label>
+                            <p>
+                                Enter the total amount you paid for the product, including local sales tax, in Canadian dollars.
+                                If you require assistance with currency conversion, use the Bank of Canada's <a href="#">daily currency converter.</a>
+                            </p>
+                            <div class="number_field">          
+                                <currency>CAN$</currency>
+                                <input type="number" name="product_price" id="product_price" value="00.00">
+                            </div>
+                        </div>
+                        <div class="btns_line">
+                            <button type="button" class="btn_line_cal" onclick="rate2()">Calculate</button>
+                            <button type="button" class="btn_line_res" onclick="reset()">Reset</button>
+                        </div>
+                    </div>
+                    <div class="rightpan">
+                        <div class="estimate_tax">
+                            <h6>Estimated duty and taxes</h6>
+                            <p class="tax_value" id="totalPrice">--</p>
+                        </div>
+                        <div class="charges_table">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>Charge</th>
+                                        <th></th>
+                                        <th>Amount</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td data-label="Heading 1">Duty</td>
+                                        <td data-label="" id="dutyPercent">@--</td>
+                                        <td data-label="Heading 2" id="duty">--</td>
+                                    </tr>
+                                    <tr>
+                                        <td data-label="Heading 1">Tax</td>
+                                        <td data-label="" id="taxPercent">@--</td>
+                                        <td data-label="Heading 2" id="tax">--</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+{% endblock %}

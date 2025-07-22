@@ -1,0 +1,183 @@
+{% extends "master.html" %}
+
+{% block title %}
+    Canada to USA
+{% endblock %}
+
+{% block content %}
+        <!-- Inner Hero Banner -->
+        <section class="hero_banner">
+            <div class="main_container">
+                <div class="content_sec">
+                    <div class="leftpan">
+                        <h1 class="main_title">Canada to USA Shipping</h1>   
+                        <p class="para_title para_big_title">
+                            With Buybox Express, your e-commerce packages and parcels smoothly cross the border 
+                            for convenient drop-off at USPS/UPS/FedEx locations in Niagara Falls, NY.
+                        </p>    
+                    </div>
+                    <div class="rightpan">
+                        <img src="../static/img/ca-to-usa.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="buy_effect">
+            <div class="main_container">
+                <div class="content_sec">                    
+                    <h2>Experience the Buybox Express’ Effect</h2>
+                    <p>Ship via USPS, UPS, or FedEx from Canada </p>
+                    <p>
+                        When you register on our website, you will receive a free USA Address to use as your ship from location.
+                    </p>
+                    <p>
+                        We will transportation your packages across the border into the US, handling all necessary paperwork.
+                    </p>
+                    <p>
+                        Your international parcels from Canada to the US, will become local USA parcels, ready for delivery by USPS, UPS, or FedEx.
+                    </p>
+                    <p>                         
+                        Additionally, parcels valued at under $800 USD per USA recipient are exempt from tax/duty.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section class="prohibited_sec">
+            <div class="main_container">
+                <div class="content_sec">
+                    <h2><img src="../static/img/prohibited.png" alt=""> Prohibited and Restricted items</h2>
+                    <p>There are several items we cannot ship to the U.S. from alcohol, batteries, chocolate, to weapons.</p>
+                    <a href="#">View full list of prohibited items</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="ctus_sec">
+            <div class="main_container">
+                <h2 class="title_after title_before">Canada to USA Shipping</h2>
+                <div class="content_sec">
+                    <div class="single_ctus">
+                        <p class="number_title">1</p>
+                        <img class="icon_img" src="../static/img/icon_1.png" alt="">
+                        <ul class="ctus_list">
+                            <li>Sign up on our website and log in.</li>
+                            <li>Navigate to "New Shipment" or "Import."</li>
+                            <li>Complete the necessary shipment details.</li>
+                            <li>Make your payment.</li>
+                        </ul>
+                    </div>
+                    <div class="single_ctus">
+                        <p class="number_title">2</p>
+                        <img class="icon_img" src="../static/img/icon_2.png" alt="">
+                        <ul class="ctus_list">
+                            <li>Prepare your packages for shipping.</li>
+                            <li>Affix a USA carrier label to each one.</li>
+                        </ul>
+                    </div>
+                    <div class="single_ctus">
+                        <p class="number_title">3</p>
+                        <img class="icon_img" src="../static/img/icon_3.png" alt="">
+                        <ul class="ctus_list">
+                            <li>Drop off your items at our location, OR</li>
+                            <li>Reach out to us to arrange a pickup at your preferred location.</li>
+                        </ul>
+                    </div>
+                    <div class="single_ctus">
+                        <p class="number_title">4</p>
+                        <img class="icon_img" src="../static/img/icon_4.png" alt="">
+                        <ul class="ctus_list">
+                            <li>We will prepare customs paperwork for free.</li>
+                            <li>We will drive the packages across the Canada-USA border and hand them over to any USA carrier of your choice.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="cal_sec">
+    <div class="main_container">
+        <h2 class="sub_title">Get an estimate with our shipping calculator!</h2>
+        <div class="calculator">
+            <div class="calculator_fields">
+                <label for="originCountry">
+                    <select name="originCountry" id="originCountry">
+                        <option value="USA">USA</option>
+                        <option value="Canada">Canada</option>
+                    </select>
+                </label>
+                <label for="destinationCountry">
+                    <select name="destinationCountry" id="destinationCountry" disabled>
+                        <option value="Canada">Canada</option>
+                        <option value="USA">USA</option>
+                    </select>
+                </label>
+                <label for="">
+                    <select name="packageCategory" id="packageCategory">
+                        <option value="packageCategory">Package Category</option>
+                    </select>
+                </label>
+            </div>
+            <div class="calculator_fields">
+                <label for="products">
+                    <select name="products" id="products">
+                        <option value="">Select a package category</option>
+                    </select>
+                </label>
+                <label for="quantity">
+                    <input type="number" name="quantity" id="quantity" value="1">
+                </label>
+                <label for="productType" id="productTypeOption">
+                    <select name="productType" id="productType">
+                        <option value="">Product Type</option>
+                        <option value="consolidate">Consolidate</option>
+                        <option value="nonconsolidate">Non-Consolidate</option>
+                    </select>
+                </label>
+                <label for="productWeight" id="productWeightOption" style="display:none;">
+                    <select name="productWeight" id="productWeight">
+                        <option value="">Product Weight</option>
+                        <option value="0lbs to 9.99lbs">0lbs to 9.99lbs</option>
+                        <option value="10lbs to 19.99lbs">10lbs to 19.99lbs</option>
+                        <option value="20lbs to 29.99lbs">20lbs to 29.99lbs</option>
+                        <option value="30lbs to 39.99lbs">30lbs to 39.99lbs</option>
+                        <option value="Over 40lbs">Over 40lbs</option>
+                    </select>
+                </label>
+
+                <label for="Location">
+                    <select name="Where the Product is Made" id="location">
+                        <option value="">Location</option>
+                        <option value="Canada">Canada</option>
+                        <option value="Elsewhere">Elsewhere</option>
+                    </select>
+                </label>
+            </div>
+            <input type="submit" name="" id="" value="get rates" class="white_cta" onclick="rate()">
+            <p>Import duties and taxes may apply. <b><a href="#">Click here to determine</a></b></p>
+        </div>
+        <div class="rates" id="rates" style="display: none;">
+            <h5 style="margin:0px">Total Price</h5>
+            <p id="taxLine">Tax: <span id="taxLineValue"> $0.00</span></p>
+            <p id="dutyLine">Duty:<span id="dutyLineValue"> $0.00</span></p>
+            <p id="totalPriceLine">Total: <span id="totalPriceLineValue"> $0.00</span></p>
+        </div>
+    </div>
+</section>
+
+
+        <section class="us_partner">
+            <div class="main_container">
+                <div class="content_sec">
+                    <h2>BuyBox Express works with the following US partner carriers</h2>
+                    <div class="gallery">
+                        <img src="../static/img/usps.png" alt="">
+                        <img src="../static/img/ups.png" alt="">
+                        <img src="../static/img/fedex.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+{% endblock %}
